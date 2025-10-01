@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Informe sua Nacionalidade:</h1>
+    <input type="text" id="nac" placeholder="Informe sua nacionalidade">
+    <input type="button" value="Verificar" onclick="Calc()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Calc() {
+            var ori = (nac.value);
+            var res = window.document.getElementById('res');
+            if (ori !== 'brasileiro') {
+                res.innerHTML = `Sua nacionalidade é ${ori}! `;
+            } else {
+                res.innerHTML = `MACACO`;
+            }
+        }
+    </script>
+</body>
+
+</html>

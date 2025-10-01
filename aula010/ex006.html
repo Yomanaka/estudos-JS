@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo DOM</title>
+    <style>
+        div#area{
+            display: flex;
+            background: rgb(42, 139, 42);
+            font: normal 20pt Arial;
+            color: #fff;
+            width: 200px;
+            height: 200px;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <p>Você sabe </p> 
+    </div>
+    <script>
+        var a = window.document.getElementById('area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        function clicar() {
+            a.innerText = 'Moggado';  
+            a.style.background = 'red';         
+        }
+        function entrar() {
+            a.innerText = 'Oq sobra pro betinha ?';
+        }
+        function sair() {
+            a.innerText = 'Não sobra nada Muray';
+            a.style.background = 'rgb(42, 139, 42)';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Inicio das pombadas em DOM</h1>
+    <p>Veja bem</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div id="msg">Press here Chimp</div>
+    <script>
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[1];
+        var d = window.document.getElementById('msg');
+        d.style.background = 'white'; 
+        d.innerText = 'chimp'
+    </script>
+</body>
+</html>
