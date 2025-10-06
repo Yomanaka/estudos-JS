@@ -1,0 +1,38 @@
+const loginUser = (email, password, onSucess, onError) => {
+    setTimeout(() => {
+        const error = false;
+        if (error) {
+            return onError(new Error('error in login!'));
+        }
+        console.log("user logged!")
+        onSucess({ email });
+    }, 1500);
+};
+
+const getUsersVideo = (email, callback) => {
+    setTimeout(() => {
+        callback(['video1', 'video2', 'video3'])
+    }, 2000);
+};
+
+const getVideoDetails = (video, callback) => {
+    setTimeout(() => {
+        callback({ title: 'video title' })
+    }, 2500);
+}
+
+loginUser(
+    'valstillhardt@gmail.com',
+    '123456',
+    (user) => {
+        getUsersVideo(user.email, (videos) => {
+            console.log({ videos })
+            getVideoDetails(videos[0], (videoDetails) => {
+                console.log({ videoDetails })
+            })
+        })
+    },
+    (error) => {
+        console.log(error)
+    }
+);
